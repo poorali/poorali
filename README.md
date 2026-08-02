@@ -14,8 +14,8 @@ Frontend architect & design-systems consultant. I build design systems as
 **Web Components** — one implementation, consumed natively by **Angular** and
 **React/Next** apps inside **Nx** monorepos.
 
-- Currently: sole design-system architect for a German B2B subscription-management
-  SaaS (contract, remote)
+- Currently: sole design-system architect at **mvneco** — a German B2B
+  subscription-management SaaS (contract, remote)
 - Before that: co-founded a freelancer-collaboration SaaS; 11 years across
   React, Angular, Vue, TypeScript, Node, Laravel
 - Why the graph is quiet: client work ships on a private GitLab
