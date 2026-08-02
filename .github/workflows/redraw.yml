@@ -1,0 +1,41 @@
+# the living readme — redraws the line every monday.
+#
+# the drawing is deterministic (poorali/rings): dates in, one unbroken line
+# out. a week later the same input is one week longer, so the readme redraws
+# itself and the bot commits the difference. --now pins to the date, so any
+# rerun on the same day produces byte-identical output and commits nothing.
+
+name: redraw
+on:
+  schedule:
+    - cron: '17 5 * * 1'   # mondays, 05:17 utc
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  redraw:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: draw one week more
+        run: npx --yes github:poorali/rings career.json --now "$(date -u +%F)" -o line.svg
+
+      - name: commit as the days it covers
+        run: |
+          if git diff --quiet -- line.svg; then
+            echo "same day, same bytes — nothing to commit"
+            exit 0
+          fi
+          MSG="$(node -e 'const B=Date.UTC(2015,6,1),d=Math.floor((Date.now()-B)/864e5),f=n=>n.toLocaleString("en-US");console.log(`days ${f(d-6)}–${f(d)}`)')"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add line.svg
+          git commit -m "$MSG"
+          git push
