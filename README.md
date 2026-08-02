@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://poorali.dev">
     <img src="line.png" width="100%"
-         alt="Eleven years of work drawn as one unbroken line — one revolution per year since 2015.">
+         alt="Eleven years of work drawn as one unbroken line — one revolution per year since 2015; the current year burns orange.">
   </a>
 </p>
 <p align="center"><sub><em>I optimise for year three.</em> — one revolution per year
