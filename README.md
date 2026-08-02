@@ -1,12 +1,13 @@
 <p align="center">
   <a href="https://poorali.dev">
-    <img src="line.png" width="100%"
+    <img src="line.svg" width="100%"
          alt="Eleven years of work drawn as one unbroken line — one revolution per year since 2015; the current year burns orange.">
   </a>
 </p>
 <p align="center"><sub><em>I optimise for year three.</em> — one revolution per year
 since 2015 · drawn from dates, not Math.random() ·
-<a href="https://poorali.dev">the live drawing is one day longer</a></sub></p>
+<a href="https://poorali.dev">the live drawing is one day longer</a> ·
+redrawn every monday by <a href="https://github.com/poorali/rings">rings</a></sub></p>
 
 # Nima Poorali
 
